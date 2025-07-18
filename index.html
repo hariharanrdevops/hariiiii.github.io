@@ -1,16 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Muthu Medical – Mudikondan</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f9f9f9; }
-    header { background-color: #4672d4; color: white; padding: 20px; text-align: center; }
-    main { padding: 20px; }
-    .info { background: white; padding: 15px; border-radius: 8px; max-width: 600px; margin: 0 auto; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
-    h1, h2 { margin-top: 0; }
-    footer { text-align: center; padding: 10px; font-size: 0.9em; color: #555; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', sans-serif; line-height: 1.6; color: #333; background-color: #f9f9f9; }
+    header { background: url('https://images.unsplash.com/photo-1588776814546-bad5a0d10d4a') center/cover no-repeat; color: white; padding: 100px 20px; text-align: center; }
+    header h1 { font-size: 3em; margin-bottom: 10px; }
+    header p { font-size: 1.2em; }
+    .btn { margin-top: 20px; background: #ffffff; color: #333; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; font-weight: 600; }
+    section { padding: 60px 20px; max-width: 1100px; margin: auto; }
+    h2 { text-align: center; margin-bottom: 30px; color: #2c3e50; }
+    .services { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; }
+    .service-card { background: white; padding: 20px; border-radius: 10px; width: 250px; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+    .service-card img { width: 60px; margin-bottom: 15px; }
+    .about, .contact { background: #fff; border-radius: 10px; padding: 30px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+    iframe { width: 100%; border: 0; height: 300px; border-radius: 10px; margin-top: 20px; }
+    footer { background: #2c3e50; color: white; padding: 30px 20px; text-align: center; }
   </style>
 </head>
 <body>
@@ -18,27 +27,46 @@
   <header>
     <h1>Muthu Medical</h1>
     <p>Main Road, Mudikondan, Thiruvarur District – 609502</p>
+    <button class="btn">Get in Touch</button>
   </header>
 
-  <main>
-    <div class="info">
-      <h2>Welcome!</h2>
-      <p>Your trusted pharmacy in Mudikondan, providing quality medicines and care since [Year Established].</p>
-      <h3>Our Services</h3>
-      <ul>
-        <li>Prescription medicines</li>
-        <li>OTC health products</li>
-        <li>Health consultations</li>
-        <li>Home delivery (local area)</li>
-      </ul>
-      <h3>Contact Us</h3>
-      <p><strong>Phone:</strong> [Your Phone Number]</p>
-      <p><strong>Email:</strong> <a href="mailto:info@muthumedical.com">info@muthumedical.com</a></p>
+  <section>
+    <h2>Our Services</h2>
+    <div class="services">
+      <div class="service-card">
+        <img src="https://img.icons8.com/ios-filled/50/4a90e2/pill.png"/>
+        <h3>Prescription Drugs</h3>
+        <p>Wide range of essential and emergency medicines.</p>
+      </div>
+      <div class="service-card">
+        <img src="https://img.icons8.com/ios-filled/50/4a90e2/first-aid-kit.png"/>
+        <h3>First Aid</h3>
+        <p>OTC essentials like bandages, ointments, and pain relief.</p>
+      </div>
+      <div class="service-card">
+        <img src="https://img.icons8.com/ios-filled/50/4a90e2/stethoscope.png"/>
+        <h3>Health Advice</h3>
+        <p>Free consultation on general medicines & dosage.</p>
+      </div>
     </div>
-  </main>
+  </section>
+
+  <section class="about">
+    <h2>About Muthu Medical</h2>
+    <p>Located at the heart of Mudikondan, we have been serving the community for over 10 years with reliable, affordable medicines and quality healthcare products.</p>
+  </section>
+
+  <section class="contact">
+    <h2>Contact & Location</h2>
+    <p><strong>Address:</strong> Main Road, Mudikondan, Thiruvarur District – 609502</p>
+    <p><strong>Phone:</strong> +91-XXXXXXXXXX</p>
+    <p><strong>Email:</strong> info@muthumedical.com</p>
+    <iframe src="https://www.google.com/maps?q=Mudikondan,+Thiruvarur,+Tamil+Nadu,+India&output=embed"></iframe>
+  </section>
 
   <footer>
     <p>&copy; 2025 Muthu Medical. All rights reserved.</p>
+    <p>Open Hours: Mon–Sat 9:00 AM – 9:00 PM</p>
   </footer>
 
 </body>
