@@ -5,38 +5,53 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Muthu Medical – Mudikondan</title>
 
-  <!-- Google Font -->
+  <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
   <style>
     :root {
-      --primary: #009688;      /* teal */
-      --primary-dark: #006d5d; /* darker teal for hover */
+      --primary: #009688;
+      --primary-dark: #006d5d;
       --text-dark: #2c3e50;
       --bg-light: #f7fafa;
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Inter', sans-serif; background: var(--bg-light); color: var(--text-dark); line-height: 1.6; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg-light);
+      color: var(--text-dark);
+      line-height: 1.6;
+    }
 
-    /* ---------- HERO ---------- */
     header {
-      background: url('https://images.unsplash.com/photo-1588776814546-bad5a0d10d4a?auto=format&fit=crop&w=1950&q=80')
-                  center/cover no-repeat;
+      background: url('https://images.unsplash.com/photo-1588776814546-bad5a0d10d4a?auto=format&fit=crop&w=1950&q=80') center/cover no-repeat;
       position: relative;
       text-align: center;
       color: #fff;
       padding: 120px 20px;
     }
-    /* subtle overlay for readability */
+
     header::before {
-      content:"";
-      position:absolute; inset:0;
-      background: rgba(0,0,0,0.45);
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.45);
     }
-    header > * { position:relative; z-index:1; }
-    header h1 { font-size: 3rem; letter-spacing: 1px; margin-bottom: .4em; }
-    header p  { font-size: 1.25rem; }
+
+    header > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: .4em;
+    }
+
+    header p {
+      font-size: 1.25rem;
+    }
 
     .btn {
       display: inline-block;
@@ -49,107 +64,158 @@
       font-size: 1rem;
       font-weight: 600;
       cursor: pointer;
-      transition: background .25s ease;
+      transition: background 0.25s ease;
+      text-decoration: none;
     }
-    .btn:hover { background: var(--primary-dark); }
 
-    /* ---------- COMMON SECTION ---------- */
-    section { padding: 70px 20px; max-width: 1100px; margin: auto; }
-    h2 { text-align: center; margin-bottom: 38px; font-size: 2rem; color: var(--primary-dark); }
+    .btn:hover {
+      background: var(--primary-dark);
+    }
 
-    /* ---------- SERVICES ---------- */
-    .services { display: flex; flex-wrap: wrap; gap: 24px; justify-content: center; }
+    section {
+      padding: 70px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 38px;
+      font-size: 2rem;
+      color: var(--primary-dark);
+    }
+
+    .services {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      justify-content: center;
+    }
+
     .service-card {
       background: #fff;
       width: 260px;
       padding: 28px 22px;
       border-radius: 12px;
       text-align: center;
-      box-shadow: 0 6px 14px rgba(0,0,0,0.08);
-      transition: transform .25s;
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+      transition: transform 0.25s;
     }
-    .service-card:hover { transform: translateY(-4px); }
-    .service-card img { width: 64px; margin-bottom: 18px; }
-    .service-card h3 { margin-bottom: 10px; font-size: 1.2rem; color: var(--text-dark); }
 
-    /* ---------- ABOUT & CONTACT BOXES ---------- */
+    .service-card:hover {
+      transform: translateY(-4px);
+    }
+
+    .service-card img.icon {
+      width: 64px;
+      margin-bottom: 18px;
+    }
+
+    .service-card img.photo {
+      width: 100%;
+      border-radius: 8px;
+      margin: 12px 0;
+    }
+
+    .service-card h3 {
+      margin-bottom: 10px;
+      font-size: 1.2rem;
+      color: var(--text-dark);
+    }
+
     .box {
       background: #fff;
       border-radius: 12px;
       padding: 38px 30px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
       margin-bottom: 50px;
     }
 
-    /* ---------- MAP ---------- */
-    iframe { width: 100%; height: 320px; border: 0; border-radius: 10px; margin-top: 22px; }
+    iframe {
+      width: 100%;
+      height: 320px;
+      border: 0;
+      border-radius: 10px;
+      margin-top: 22px;
+    }
 
-    /* ---------- FOOTER ---------- */
     footer {
       background: var(--primary-dark);
       color: #e4f2f1;
       text-align: center;
       padding: 32px 20px;
     }
-    footer p { margin-bottom: 6px; font-size: .95rem; }
+
+    footer p {
+      margin-bottom: 6px;
+      font-size: 0.95rem;
+    }
   </style>
 </head>
 <body>
 
-  <!-- ===== HERO ===== -->
+  <!-- HERO -->
   <header>
-    <h1>Muthu Medical</h1>
-    <p>Main Road, Mudikondan · Thiruvarur DT – 609502</p>
+    <h1>Muthu Medical</h1>
+    <p>Main Road, Mudikondan · Thiruvarur DT – 609502</p>
     <a href="#contact" class="btn">Get in Touch</a>
   </header>
 
-  <!-- ===== SERVICES ===== -->
+  <!-- SERVICES -->
   <section id="services">
-    <h2>Our Services</h2>
+    <h2>Our Services</h2>
 
     <div class="services">
       <div class="service-card">
-        <img src="https://img.icons8.com/ios-filled/100/009688/pill.png" alt="Prescription Drugs icon">
-        <h3>Prescription Drugs</h3>
+        <img src="https://img.icons8.com/ios-filled/100/009688/pill.png" alt="Prescription Drugs icon" class="icon">
+        <h3>Prescription Drugs</h3>
         <p>Extensive stock of essential & emergency medicines.</p>
       </div>
+
       <div class="service-card">
-        <img src="https://img.icons8.com/ios-filled/100/009688/first-aid-kit.png" alt="First Aid icon">
-        <h3>First Aid</h3>
+        <img src="https://img.icons8.com/ios-filled/100/009688/first-aid-kit.png" alt="First Aid icon" class="icon">
+        <img src="https://cdn.pixabay.com/photo/2017/05/31/13/14/first-aid-2358459_960_720.jpg" alt="Real First Aid Kit" class="photo">
+        <h3>First Aid</h3>
         <p>OTC products: bandages, ointments, pain relief & more.</p>
       </div>
+
       <div class="service-card">
-        <img src="https://img.icons8.com/ios-filled/100/009688/stethoscope.png" alt="Health Advice icon">
-        <h3>Health Advice</h3>
+        <img src="https://img.icons8.com/ios-filled/100/009688/stethoscope.png" alt="Health Advice icon" class="icon">
+        <h3>Health Advice</h3>
         <p>Free guidance on medicines, dosage & general care.</p>
       </div>
     </div>
   </section>
 
-  <!-- ===== ABOUT ===== -->
+  <!-- ABOUT -->
   <section>
     <div class="box">
-      <h2>About Muthu Medical</h2>
+      <h2>About Muthu Medical</h2>
       <p>Serving the Mudikondan community for over a decade, we pride ourselves on offering reliable medicines, personalised counselling and a friendly neighbourhood experience.</p>
     </div>
   </section>
 
-  <!-- ===== CONTACT & MAP ===== -->
+  <!-- CONTACT -->
   <section id="contact">
     <div class="box">
-      <h2>Contact & Location</h2>
-      <p><strong>Address:</strong> Main Road, Mudikondan, Thiruvarur DT – 609502</p>
-      <p><strong>Phone:</strong> <a href="tel:+919750197599">+91 97501 97599</a></p>
+      <h2>Contact & Location</h2>
+      <p><strong>Address:</strong> Main Road, Mudikondan, Thiruvarur DT – 609502</p>
+      <p><strong>Phone:</strong> <a href="tel:+919750197599">+91 97501 97599</a></p>
       <p><strong>Email:</strong> <a href="mailto:hariharanr513@gmail.com">hariharanr513@gmail.com</a></p>
 
-      <!-- Google Maps embed centred on Mudikondan -->
-      <iframe src="https://www.google.com/maps?q=Mudikondan,+Tamil+Nadu,+India&output=embed" loading="lazy"></iframe>
+      <!-- Google Maps Embed – Muthu Medical exact location -->
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m2!1m1!1s0x0:0xc43dd8692fc87484!2m2!1d79.5949586!2d10.7981543" 
+        allowfullscreen 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
     </div>
   </section>
 
-  <!-- ===== FOOTER ===== -->
+  <!-- FOOTER -->
   <footer>
-    <p>&copy; 2025 Muthu Medical. All rights reserved.</p>
+    <p>&copy; 2025 Muthu Medical. All rights reserved.</p>
     <p>Open Hours: Every Day · 5 AM – 9 PM</p>
   </footer>
 
